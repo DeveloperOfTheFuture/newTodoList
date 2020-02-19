@@ -37,9 +37,11 @@ body {
   background-color: var(--default-btn-bg);
   border-color: var(--default-btn-border-color);
 }
+
 .btn-primary:not(:disabled):not(.disabled):active:focus {
   box-shadow: var(--default-btn-focus-box-shadow);
 }
+
 .btn.btn-primary:hover {
   color: var(--default-btn-text-color);
   background-color: var(--default-btn-hover-bg);
@@ -70,4 +72,21 @@ body {
   background-color: var(--input-focus-bg-color);
   border-color: var(--input-focus-border-color);
   box-shadow: var(--input-focus-box-shadow);
+}
+
+.empty-msg {
+  color: #3496eb;
+  text-align: center;
+  border: 1px solid #3496eb;
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.buttons-section .container {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
 }
