@@ -95,7 +95,7 @@ const tasks = [{
     },
   };
 
-  let lastSelectedTheme = 'default';
+  let lastSelectedTheme = localStorage.getItem('theme') || 'default';
 
 
   const listContainer = document.querySelector(
@@ -109,6 +109,7 @@ const tasks = [{
   const themeSelect = document.getElementById('themeSelect');
 
 
+  setTheme(lastSelectedTheme);
   renderAllTasks(objOfTasks);
   form.addEventListener('submit', onFormSubmitHandler);
   listContainer.addEventListener('click', onDeletehandler);
@@ -292,6 +293,7 @@ const tasks = [{
     }
     setTheme(selectedTheme);
     lastSelectedTheme = selectedTheme;
+    localStorage.setItem('theme', selectedTheme);
   }
 
   function setTheme(name) {
